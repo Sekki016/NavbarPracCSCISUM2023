@@ -1,0 +1,58 @@
+/* Remember to import the style sheet into Navbar.js */
+nav{
+  /* This centers and moves the Logo into one row*/
+  display: flex;
+  align-items: center;
+  /* How much space is in-between the Logo and the links */
+  justify-content: space-between;
+  /* Background color */
+  background: #1b2430;
+  /* Padding : I think is like how the screen adjusts to the computer */
+  padding: 20px 80px;
+  /* I have no idea what the heck this thing does */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+{/* This connects to id="navbar" in App.js. Looks like it focuses on the grouping of the tabs in general*/}
+#navbar{
+  /* Display: Puts it all in a row??? */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Looks like this focuses on the individual tab */
+#navbar li{
+  list-style: none;
+  /* Top and bottom (1st param) left and right (2nd param) */
+  padding: 0 20px;
+  position: relative;
+}
+
+/* Looks like this focuses on the tab name? */
+#navbar li a{
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Extra: This one is very interesting : When a mouse HOVERS over the tab/link it'll be different */
+#navbar li a:hover,
+#navbar li a.active{
+  color: #17cf97;
+}
+
+/* Extra: Creating an underline for the Navbar*/
+#navbar li a:hover::after,
+#navbar li a.active::after{
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #17cf97;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+/* a.active Getting the tab to stay one color when clicked on */
